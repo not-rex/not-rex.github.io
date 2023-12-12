@@ -1,11 +1,12 @@
 <script setup>
 
+
 </script>
 
 <template>
     <div class="topnav">
         <a>PORTFOLIO</a>
-        <a href="#login" class="split">Login</a>
+        <!--<a @click="toggleLanguage" class="split">EN / 中</a>-->
         <hr class="btmline">
     </div>
 </template>
@@ -13,11 +14,12 @@
 <style scoped>
 .topnav {
   overflow: hidden;
-  height: 8vh;
+  height: 70px;
   position: fixed;
   top: 0;
   width: 100%;
   background-color:rgb(21, 21, 21);
+  z-index: 100;
 }
 
 .topnav a {
@@ -39,9 +41,13 @@
     padding-right: 3%;
 }
 
-.btmline{
-  border: 1px solid beige;
+.btmline {
+  border: 0.5px solid beige;
   width: 95%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
 }
-
 </style>

@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "gasp": "^0.0.2",
+    "gsap": "^3.12.3",
     "vue": "^3.3.10",
     "wowjs": "^1.1.3"
   },

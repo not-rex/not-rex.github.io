@@ -1,10 +1,22 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
 import HomePage from './components/HomePage.vue'
+//import LoadingScreen from './components/LoadingScreen.vue';
+import { ref, onMounted } from 'vue';
+
+const isLoading = ref(true);
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 1000);
+});
+
 </script>
 
 <template>
 
+  <!--<LoadingScreen v-if="isLoading"/>-->
   <NavBar />
   <HomePage />
   
