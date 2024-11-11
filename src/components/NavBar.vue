@@ -1,11 +1,18 @@
 <script setup>
 
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goHome = () => {
+  router.push('/');
+};
 
 </script>
 
 <template>
     <div class="topnav">
-        <a>PORTFOLIO</a>
+        <a @click="goHome">PORTFOLIO</a>
         <!--<a @click="toggleLanguage" class="split">EN / 中</a>-->
         <hr class="btmline">
     </div>
@@ -18,7 +25,9 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color:rgb(21, 21, 21);
+  background-color: rgba(11, 11, 11, 0.5);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   z-index: 100;
 }
 
@@ -30,10 +39,11 @@
   text-decoration: none;
   font-size: 17px;
   padding-left: 3%;
+  transition: color 0.3s;
 }
 
 .topnav a:hover {
-  color: rgb(143, 143, 143);
+  color: rgba(255, 255, 255, 0.384);
 }
 
 .topnav a.split {
@@ -49,5 +59,6 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
+  opacity: 0%;
 }
 </style>
